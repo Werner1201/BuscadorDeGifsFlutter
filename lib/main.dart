@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:buscador_de_gifs/ui/home_page.dart';
+import 'package:buscador_de_gifs/ui/gif_page.dart';
 
 void main(){
   runApp(MaterialApp(
-    home: Home(),
+    theme: new ThemeData(
+      hintColor: Colors.white,
+        inputDecorationTheme: InputDecorationTheme(
+            enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white))
+        )
+    ),
+    home: HomePage(),
+
   ));
 }
 
-class Home extends StatefulWidget {
-  @override
-  _HomeState createState() => _HomeState();
-}
 
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
+
